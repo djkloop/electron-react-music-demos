@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import OtherPage from '../components/OtherPage';
+import OtherPage from '../views/OtherPage';
 
 type Props = {};
 
