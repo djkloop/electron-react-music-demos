@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
+import { Provider } from 'mobx-react';
+import { Router } from 'react-router';
 import Routes from '../routes';
 
 type Props = {
@@ -12,10 +12,10 @@ type Props = {
 export default class Root extends Component<Props> {
   render() {
     return (
-      <Provider store={this.props.store}>
-        <ConnectedRouter history={this.props.history}>
+      <Provider {...this.props.store}>
+        <Router history={this.props.history}>
           <Routes />
-        </ConnectedRouter>
+        </Router>
       </Provider>
     );
   }
