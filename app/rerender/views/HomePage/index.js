@@ -13,7 +13,9 @@ export default class HomePage extends Component<Props> {
       <div>
         <div className={styles.container} data-tid="container">
           <h2>Home</h2>
-          <Link to="/other">To Other Page</Link>
+          <Link to="/other">
+            <button>滚去另外一个页面</button>
+          </Link>
         </div>
       </div>
     );
