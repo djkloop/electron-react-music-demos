@@ -1,0 +1,3 @@
+export const CHANGE_TITLE = 'CHANGE_TITLE';
+export const GET_INIT_LIST = 'GET_INIT_LIST';
+export const RELOAD_INIT_LIST = 'RELOAD_INIT_LIST';

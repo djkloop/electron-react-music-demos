@@ -1,23 +1,31 @@
-import createBrowserHistory from 'history/createBrowserHistory';
-import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { createLogger } from 'redux-logger';
+import createSageMiddleware from 'redux-saga';
+import rootSagas from './sage';
+import rootReducer from './reducer';
 
-import AppStore from '../model/App';
+const middleware = [];
+const enhancers = [];
+// redux-sage
+const sagaMiddleware = createSageMiddleware();
+middleware.push(sagaMiddleware);
 
-class RootStore {
-  constructor() {
-    this.app = new AppStore(this);
-  }
-}
+// redux-logger
+const logger = createLogger({
+  level: 'info',
+  collapsed: true
+});
+middleware.push(logger);
 
-const combineStore = new RootStore();
-const routingStore = new RouterStore();
+// redux-devtools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+  : compose;
 
-const stores = {
-  routing: routingStore,
-  combineStore
-};
+enhancers.push(applyMiddleware(...middleware));
+const enhancer = composeEnhancers(...enhancers);
 
-const browserHistory = createBrowserHistory();
-const history = syncHistoryWithStore(browserHistory, routingStore);
+const store = createStore(rootReducer, enhancer);
+sagaMiddleware.run(rootSagas);
 
-export { stores, history };
+export default store;

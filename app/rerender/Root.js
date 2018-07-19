@@ -1,19 +1,19 @@
 // @flow
 import React, { Component } from 'react';
-import { Provider } from 'mobx-react';
 import { Router } from 'react-router';
+import { Provider } from 'react-redux';
+
+import createHistory from 'history/createBrowserHistory';
 import Routes from '../routes';
+import store from '../store';
 
-type Props = {
-  store: {},
-  history: {}
-};
+const history = createHistory();
 
-export default class Root extends Component<Props> {
+export default class Root extends Component {
   render() {
     return (
-      <Provider {...this.props.store}>
-        <Router history={this.props.history}>
+      <Provider store={store}>
+        <Router history={history}>
           <Routes />
         </Router>
       </Provider>
