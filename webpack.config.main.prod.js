@@ -30,7 +30,6 @@ export default merge.smart(baseConfig, {
       parallel: true,
       sourceMap: true
     }),
-
     new BundleAnalyzerPlugin({
       analyzerMode:
         process.env.OPEN_ANALYZER === 'true' ? 'server' : 'disabled',

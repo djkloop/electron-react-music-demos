@@ -1,0 +1,14 @@
+@import './_colors.scss';
+
+%theme-black-white {
+  background: $theme-bg-black;
+  color: $theme-ft-white;
+}
+
+%can-drag {
+  -webkit-app-region: drag;
+}
+
+%not-drag {
+  -webkit-app-region: no-drag;
+}

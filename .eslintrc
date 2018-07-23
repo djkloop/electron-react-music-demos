@@ -25,6 +25,7 @@
     "no-use-before-define": "off",
     "no-underscore-dangle": "off",
     "no-multi-assign": "off",
+    "no-unused-expressions": "off",
     "promise/param-names": "error",
     "promise/always-return": "error",
     "promise/catch-or-return": "error",

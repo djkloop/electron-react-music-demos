@@ -1,0 +1,55 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_prefix.scss';
+@import '../../styles/_colors.scss';
+
+.#{$sider-prefix} {
+
+  display: flex;
+  color: $theme-ft-white;
+
+  &_sider {
+    max-width: $global-width;
+    min-width: $global-width;
+    width: $global-width;
+    border-left: 1px solid #2b2727;
+    background: $theme-bg-black;
+    box-shadow: -2px 0 6px $theme-border-black;
+    flex: 0 0 $global-width;
+
+    &_back {
+      margin: 15px 0 0 15px;
+    }
+
+    h5 {
+      font-weight: normal;
+      text-align: center;
+      font-size: 26px;
+      margin-top: 25px;
+    }
+
+    &_block {
+      padding: 10px;
+    }
+
+    &_title {
+      font-size: 16px;
+      color: $theme-sider-title-gary;
+      font-weight: normal;
+      margin: 20px 0 0 15px;
+    }
+
+    &_list {
+      margin: 10px 0 0;
+      li {
+        height: $sider-list-item-height;
+        line-height: $sider-list-item-height;
+        font-weight: $font-weight;
+
+        span {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+
+}

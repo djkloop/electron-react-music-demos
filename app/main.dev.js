@@ -10,7 +10,7 @@
  *
  * @flow
  */
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 import MenuBuilder from './menu';
 
@@ -63,7 +63,8 @@ app.on('ready', async () => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 1024,
-    height: 728
+    height: 728,
+    frame: false
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
@@ -74,8 +75,22 @@ app.on('ready', async () => {
     if (!mainWindow) {
       throw new Error('"mainWindow" is not defined');
     }
+
     mainWindow.show();
     mainWindow.focus();
+  });
+
+  ipcMain.on('min', () => mainWindow.minimize());
+  ipcMain.on('max', () => {
+    if (mainWindow.isMaximized()) {
+      mainWindow.unmaximize();
+    } else {
+      mainWindow.maximize();
+    }
+  });
+
+  ipcMain.on('close', () => {
+    mainWindow.hide();
   });
 
   mainWindow.on('closed', () => {
@@ -85,3 +100,11 @@ app.on('ready', async () => {
   const menuBuilder = new MenuBuilder(mainWindow);
   menuBuilder.buildMenu();
 });
+
+if (process.platform === 'darwin') {
+  app.on('activate', () => {
+    if (mainWindow) {
+      mainWindow.show();
+    }
+  });
+}

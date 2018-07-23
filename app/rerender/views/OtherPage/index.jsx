@@ -1,13 +1,10 @@
 // @flow
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { inject, observer  } from 'mobx-react'
 import NativeElectronNotification from '../../native_electron_components/notification'
 import otherStyle from './Other.scss'
 
 
-@inject(root => ({app: root.combineStore.app}))
-@observer
 export default class OtherPage extends Component<Props> {
 
   constructor(props) {

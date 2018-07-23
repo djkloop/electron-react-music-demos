@@ -1,11 +1,21 @@
 // @flow
-import { app, Menu, shell, BrowserWindow } from 'electron';
+import { app, Menu, shell, BrowserWindow, Tray, nativeImage } from 'electron';
+import path from 'path';
 
+let appIcon = null;
 export default class MenuBuilder {
   mainWindow: BrowserWindow;
 
   constructor(mainWindow: BrowserWindow) {
     this.mainWindow = mainWindow;
+    const image = nativeImage.createFromPath(
+      path.resolve(__dirname, './music.png')
+    );
+    appIcon = new Tray(image);
+    appIcon.setToolTip('这是一个彩蛋...点击有惊喜...!!!');
+    appIcon.on('click', () => {
+      mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show();
+    });
   }
 
   buildMenu() {
@@ -48,26 +58,26 @@ export default class MenuBuilder {
       label: 'Electron',
       submenu: [
         {
-          label: 'About ElectronReact',
+          label: '关于这个软件',
           selector: 'orderFrontStandardAboutPanel:'
         },
         { type: 'separator' },
-        { label: 'Services', submenu: [] },
+        { label: '服务', submenu: [] },
         { type: 'separator' },
         {
-          label: 'Hide ElectronReact',
+          label: '隐藏',
           accelerator: 'Command+H',
           selector: 'hide:'
         },
         {
-          label: 'Hide Others',
+          label: '隐藏其他软件',
           accelerator: 'Command+Shift+H',
           selector: 'hideOtherApplications:'
         },
-        { label: 'Show All', selector: 'unhideAllApplications:' },
+        { label: '显示全部', selector: 'unhideAllApplications:' },
         { type: 'separator' },
         {
-          label: 'Quit',
+          label: '退出',
           accelerator: 'Command+Q',
           click: () => {
             app.quit();

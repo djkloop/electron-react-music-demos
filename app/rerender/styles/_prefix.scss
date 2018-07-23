@@ -1,0 +1,7 @@
+$elec: "elec_";
+$elect-prefix: $elec + "container";
+$sider-prefix: $elec + "sider_container";
+$main-prefix: $elec + "main_container";
+$header-prefix: $elec + "header_container";
+$footer-prefix: $elec + "footer_container";
+$container-prefix: $main-prefix + "_content"

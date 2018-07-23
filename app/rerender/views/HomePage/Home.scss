@@ -1,0 +1,7 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_prefix.scss';
+@import '../../styles/_colors.scss';
+
+.#{$container-prefix} {
+  height: calc(100% - #{$header-height} - #{$footer-height});
+}

@@ -1,0 +1,49 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_prefix.scss';
+@import '../../styles/_colors.scss';
+@import '../../styles/_mixins.scss';
+
+.#{$header-prefix} {
+  height: $header-height;
+  @extend %theme-black-white;
+  @extend %can-drag;
+
+  &_right {
+    width: 100%;
+    line-height: $header-height / 3;
+  }
+
+  &_dot_container {
+    width: 62px;
+    &:hover {
+      svg {
+          background: #495056;
+        }
+    }
+  }
+
+  &_dot {
+    color: #fc605b;
+    display: inline-block;
+    margin: 5px;
+    width: $header-dot-width;
+    height: $header-dot-width;
+    line-height: $header-dot-width;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    background: #fc615d;
+
+    @extend %not-drag;
+  }
+
+  &_dot:nth-child(2) {
+    color: #ffbc45;
+    background: #ffbc45;
+  }
+  &_dot:nth-child(3) {
+    color: #36c647;
+    background: #36c647;
+    margin: 5px 0 5px 5px;
+  }
+}

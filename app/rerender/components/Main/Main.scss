@@ -1,0 +1,17 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_prefix.scss';
+@import '../../styles/_colors.scss';
+
+.#{$elect-prefix} {
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex: auto;
+  flex-direction: row-reverse;
+
+}
+
+.#{$main-prefix} {
+  flex: auto;
+  height: 100vh;
+}
