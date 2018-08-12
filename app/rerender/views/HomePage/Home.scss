@@ -3,5 +3,14 @@
 @import '../../styles/_colors.scss';
 
 .#{$container-prefix} {
+  background: #000;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: calc(100% - #{$header-height} - #{$footer-height});
+}
+
+.#{$container-prefix} {
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

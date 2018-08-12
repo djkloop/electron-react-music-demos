@@ -17,7 +17,7 @@ export default class App extends React.Component<Props> {
       <div>
         <Sider />
         <Header />
-        <main>{this.props.children}</main>
+        <main style={{ overflow: 'hidden' }}>{this.props.children}</main>
         <Footer />
       </div>
     );

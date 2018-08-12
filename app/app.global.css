@@ -486,3 +486,52 @@ th {
   padding: 0;
   text-align: left
 }
+
+.main-container-detail {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: space-between;
+  padding: 0 20px;
+  overflow-y: scroll;
+}
+
+.s-item {
+  display: flex;
+  flex: 1;
+  margin-top: 25px;
+}
+
+.s-l-m {
+  position: relative;
+}
+
+.s-l-m:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  content: "";
+  background: #9b9b9b;
+}
+
+.s-l-m:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 36px;
+  content: "";
+  background: #000;
+  z-index: 2;
+}
+
+.main-container-detail::-webkit-scrollbar {
+  display:none
+}
+
+.no-data-for-list {
+  color: #646c7b;
+  text-align: center;
+}

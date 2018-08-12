@@ -1,0 +1,55 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_prefix.scss';
+@import '../../styles/_colors.scss';
+.#{$carousel-prefix} {
+  width: 824px;
+  height: 100%;
+  position: relative;
+  &_content {
+    position: relative;
+    left: 90px;
+    height: 173px;
+    z-index: 996;
+    transform-style: preserve-3d;
+    perspective: 800px;
+  }
+  &_c-item {
+    width: 340px;
+    height: 173px;
+    position: absolute;
+    left: 0;
+    transition: .5s all ease-in-out;
+    z-index: 1;
+    opacity: 0;
+    border-radius: 8px;
+  }
+  &_center {
+    z-index: 999;
+    opacity: 1;
+    text-align: center;
+    transform: translateX(170px) translateZ(200px);
+    background-color: #21D4FD;
+  }
+  &_left {
+    opacity: 1;
+    z-index: 996;
+    text-align: left;
+    transform: translateZ(75px) rotateY(25deg);
+    background-color: #FEE140;
+  }
+  &_right {
+    z-index: 996;
+    opacity: 1;
+    text-align: right;
+    transform: translateX(340px) translateZ(75px) rotateY(-25deg);
+    background-color: #FEE140;
+  }
+  &_list {
+    span {
+      cursor: pointer;
+    }
+    span:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}

@@ -4,4 +4,7 @@ $sider-prefix: $elec + "sider_container";
 $main-prefix: $elec + "main_container";
 $header-prefix: $elec + "header_container";
 $footer-prefix: $elec + "footer_container";
-$container-prefix: $main-prefix + "_content"
+$container-prefix: $main-prefix + "_content";
+$carousel-prefix: "elec-carousel-conatiner";
+$left-prefix: $elec + "left_container";
+$right-prefix: $elec + "right_container";

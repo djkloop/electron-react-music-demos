@@ -18,7 +18,8 @@ import {
   faList,
   faPlusCircle,
   faMinusCircle,
-  faTimesCircle
+  faTimesCircle,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons';
 import Root from './rerender/Root';
 import './app.global.css';
@@ -37,6 +38,7 @@ library.add(
   faCoffee,
   faHeart,
   faMusic,
+  faSearch,
   faAlignJustify,
   faChevronRight,
   faCopyright

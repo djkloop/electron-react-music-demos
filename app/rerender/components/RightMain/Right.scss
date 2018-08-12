@@ -1,0 +1,90 @@
+@import '../../styles/_variable.scss';
+@import '../../styles/_prefix.scss';
+@import '../../styles/_colors.scss';
+
+.#{$right-prefix} {
+  padding: 10px 10px 0;
+  width: 100%;
+
+
+  &_head {
+
+    h3 {
+      text-align: center;
+      color: $theme-sider-title-gary;
+      position: relative;
+      height: 36px;
+      line-height: 36px;
+
+      &:after {
+        position: absolute;
+        left: 25px;
+        top: 16px;
+        content: "";
+        width: calc(50% - 100px);
+        height: 1px;
+        background: $theme-sider-title-gary;
+      }
+
+      &:before {
+        position: absolute;
+        right: 25px;
+        top:16px;
+        content: "";
+        width: calc(50% - 100px);
+        height: 1px;
+        background: $theme-sider-title-gary;
+      }
+    }
+  }
+
+  &_list {
+    padding: 0 20px 0;
+  }
+
+  &_item {
+   height: 100px;
+   margin: 15px 0 25px;
+   display: flex;
+   justify-content: space-between;
+
+   img {
+     box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+     margin-left: 15px;
+     float: left;
+   }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    height: 50%;
+    justify-content: space-between;
+
+    h2, h3 {
+      font-weight: 300;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  &_item:nth-child(1) {
+    background: linear-gradient(to bottom, #02D7DE, #247BD1);
+  }
+
+  &_item:nth-child(2) {
+    background: linear-gradient(to bottom, #672DFE, #2020FE);
+  }
+
+  &_item_left {
+    display: flex;
+    align-items: center;
+  }
+}
