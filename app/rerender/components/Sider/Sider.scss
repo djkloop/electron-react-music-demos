@@ -6,6 +6,77 @@
 
   display: flex;
   color: $theme-ft-white;
+  height: 728px;
+  overflow: hidden;
+
+  &_tip {
+    font-size: 14px;
+    color: $theme-sider-title-gary;
+    flex: 1;
+    padding-left: 25px;
+
+    span {
+      display: inline-block;
+      line-height: 55px;
+    }
+  }
+
+  &_head {
+    height: 38px;
+    line-height: 38px;
+    display: flex;
+  }
+
+  &_personal {
+    margin-top: 20px;
+    height: 30px;
+    color: #fff;
+  }
+
+  &_list_content {
+    overflow-y: scroll;
+    height: $sider-list-content-height;
+  }
+
+  &_btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(728px - #{$sider-list-content-height} - 88px);
+  }
+
+  &_list_content::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_create_btn {
+    width: 150px;
+    height: 34px;
+    line-height: 34px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    background: linear-gradient(to bottom, #F86C39 , #FF3B28);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_sider::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_pulse {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+    margin: 0 40px 20px 0;
+  }
 
   &_sider {
     max-width: $global-width;
@@ -16,8 +87,15 @@
     box-shadow: -2px 0 6px $theme-border-black;
     flex: 0 0 $global-width;
 
+
+
     &_back {
       margin: 15px 0 0 15px;
+      position: absolute;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     h5 {
@@ -41,9 +119,14 @@
     &_list {
       margin: 10px 0 0;
       li {
+        width: 150px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
         height: $sider-list-item-height;
         line-height: $sider-list-item-height;
         font-weight: $font-weight;
+
 
         span {
           margin: 0 0 0 10px;
@@ -52,4 +135,35 @@
     }
   }
 
+  &_ring {
+    animation: pulse 1.5s ease-in-out infinite;
+    position: absolute;
+    top: 8px;
+    left: 32px;
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+  }
+
+}
+
+
+.#{$sider-prefix}::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulse {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  50% {
+      opacity: 1;
+  }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+  }
 }

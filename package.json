@@ -1,7 +1,7 @@
 {
   "name": "electron-react-music",
   "productName": "ElectronReactMusic",
-  "version": "1.0.1",
+  "version": "1.0.2-alpha-0.0.1",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
@@ -215,6 +215,7 @@
     "electron-debug": "^1.5.0",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",
+    "rc-queue-anim": "^1.6.5",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-hot-loader": "^4.2.0",

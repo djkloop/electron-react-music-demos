@@ -153,19 +153,13 @@ export default class MenuBuilder {
       ]
     };
     const subMenuHelp = {
-      label: 'Help',
+      label: '帮助',
       submenu: [
         {
-          label: 'Learn More',
-          click() {
-            shell.openExternal('http://electron.atom.io');
-          }
-        },
-        {
-          label: 'Documentation',
+          label: '软件声明',
           click() {
             shell.openExternal(
-              'https://github.com/atom/electron/tree/master/docs#readme'
+              'https://www.djkloop.cn/electron-music-rect-help.html'
             );
           }
         },
@@ -176,7 +170,7 @@ export default class MenuBuilder {
           }
         },
         {
-          label: 'Search Issues',
+          label: '报告软件问题',
           click() {
             shell.openExternal('https://github.com/atom/electron/issues');
           }
@@ -250,19 +244,13 @@ export default class MenuBuilder {
               ]
       },
       {
-        label: 'Help',
+        label: '帮助',
         submenu: [
           {
-            label: 'Learn More',
-            click() {
-              shell.openExternal('http://electron.atom.io');
-            }
-          },
-          {
-            label: 'Documentation',
+            label: '软件声明',
             click() {
               shell.openExternal(
-                'https://github.com/atom/electron/tree/master/docs#readme'
+                'https://www.djkloop.cn/electron-music-rect-help.html'
               );
             }
           },
@@ -273,7 +261,7 @@ export default class MenuBuilder {
             }
           },
           {
-            label: 'Search Issues',
+            label: '报告软件问题',
             click() {
               shell.openExternal('https://github.com/atom/electron/issues');
             }

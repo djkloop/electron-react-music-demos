@@ -19,7 +19,10 @@ import {
   faPlusCircle,
   faMinusCircle,
   faTimesCircle,
-  faSearch
+  faSearch,
+  faChevronLeft,
+  faHeadphones,
+  faUser
 } from '@fortawesome/free-solid-svg-icons';
 import Root from './rerender/Root';
 import './app.global.css';
@@ -33,15 +36,18 @@ library.add(
   faUserCircle,
   faFolder,
   faFile,
+  faUser,
   faDotCircle,
   faCheckSquare,
   faCoffee,
   faHeart,
   faMusic,
   faSearch,
+  faHeadphones,
   faAlignJustify,
   faChevronRight,
-  faCopyright
+  faCopyright,
+  faChevronLeft
 );
 render(
   <AppContainer>
