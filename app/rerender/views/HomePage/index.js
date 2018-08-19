@@ -6,7 +6,7 @@ import RightMain from '../../components/RightMain';
 // import { Link } from 'react-router-dom';
 import styles from './Home.scss';
 
-export default class HomePage extends Component<Props> {
+export default class HomePage extends Component {
   render() {
     return (
       <div className={styles.elec_main_container_content}>

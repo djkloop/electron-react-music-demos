@@ -3,6 +3,8 @@ import { ulid } from 'ulid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import QueueAnim from 'rc-queue-anim'
 import SiderList from './SiderList'
+import PersonalInfo from './PersonalInfo'
+
 import style from './Sider.scss'
 
 const PREFIX = 'elec_sider_container'
@@ -129,7 +131,7 @@ export default class Nav extends Component {
     const { isPersonal } = this.state;
     return (
       <div className={style.elec_sider_container}>
-        <div className={style.elec_sider_container_sider}>
+        <div className={isPersonal ? style[`${PREFIX}_sider`]: style[`${PREFIX}_personal_info`]}>
           <div className={style[`${PREFIX}_head`]}>
             <div className={style[`${PREFIX}_pulse`]}>
               <FontAwesomeIcon
@@ -154,14 +156,13 @@ export default class Nav extends Component {
             type="bottom"
           >
             {
-                isPersonal
+                isPersonal === false
                 ?
                   <QueueAnim
                     type="bottom"
                   >
                     <div className={style[`${PREFIX}_personal`]} key="a">
-                      个人信息页面,
-                      暂无数据
+                      <PersonalInfo />
                     </div>
                   </QueueAnim>
                 :

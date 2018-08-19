@@ -78,7 +78,8 @@
     margin: 0 40px 20px 0;
   }
 
-  &_sider {
+  &_sider,
+  &_personal_info {
     max-width: $global-width;
     min-width: $global-width;
     width: $global-width;
@@ -145,6 +146,10 @@
     height: 100%;
     opacity: 0;
     width: 100%;
+  }
+
+  &_personal_info {
+    background: linear-gradient( rgba(0, 0, 0, 1),rgba(0, 0, 0, 1),rgba(0, 0, 0, 1), #188E9F);
   }
 
 }
