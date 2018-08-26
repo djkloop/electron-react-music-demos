@@ -9,7 +9,7 @@ import styles from './Home.scss';
 export default class HomePage extends Component {
   render() {
     return (
-      <div className={styles.elec_main_container_content}>
+      <div className={`${styles.elec_main_container_content} noselect`}>
         <div data-tid="container">
           <section className="s-c" style={{ marginTop: '50px' }}>
             <Carousel />

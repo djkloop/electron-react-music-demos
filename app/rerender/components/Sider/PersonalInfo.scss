@@ -113,4 +113,33 @@
     }
   }
 
+  &_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 68px 0 0;
+
+    &_btn {
+
+      button {
+        height: 34px;
+        line-height: 34px;
+        margin: 15px 10px 0;
+        width: 175px;
+        text-align: center;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 30px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+  }
+
 }
