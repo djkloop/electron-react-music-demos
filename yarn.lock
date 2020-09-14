@@ -8999,8 +8999,8 @@ rc-queue-anim@^1.6.5:
     react-lifecycles-compat "^3.0.4"
 
 rc-tween-one@^2.5.0:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/rc-tween-one/-/rc-tween-one-2.7.3.tgz#c9d3c44743e25c654d65c22ec3934afd79923fae"
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/rc-tween-one/-/rc-tween-one-2.7.2.tgz#e9a1ed2e3ab2e4c9c924d4be3a210f0928249016"
   dependencies:
     babel-runtime "6.x"
     prop-types "^15.6.1"
@@ -10472,9 +10472,9 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
 style-utils@~0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/style-utils/-/style-utils-0.2.1.tgz#c78fe6696214f4ab12701959f09553e9d81dd45b"
-
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/style-utils/-/style-utils-0.2.0.tgz#3d8614931b8ff6e1eea0545f1dbfaf271bb1aa7e"
+  
 stylefmt@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/stylefmt/-/stylefmt-6.0.0.tgz#c851e9c2d78b8a99502f74ba3d863b30163eec93"
@@ -11002,6 +11002,10 @@ tunnel-agent@^0.6.0:
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.6.0.tgz#27a5dea06b36b04a0a9966774b290868f0fc40fd"
   dependencies:
     safe-buffer "^5.0.1"
+
+tween-functions@~1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
 
 tween-functions@~1.2.0:
   version "1.2.0"
